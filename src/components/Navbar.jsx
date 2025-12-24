@@ -46,7 +46,7 @@ const Navbar = () => {
                   scrolled ? "text-white" : "text-black"
                 }`}
               >
-                Sadguru Staffing
+                SADGURU STAFFING
               </span>
             </Link>
           </div>
