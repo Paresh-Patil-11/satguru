@@ -1,8 +1,95 @@
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 import headerVideo from "../assets/Header.mp4";
+import { useState } from "react";
+import img1 from "../assets/1.jpeg";
+import img2 from "../assets/2.jpeg";
+import img3 from "../assets/3.jpeg";
+import img4 from "../assets/4.jpeg";
+import img5 from "../assets/5.jpeg";
+import img6 from "../assets/6.jpeg";
+import img7 from "../assets/7.jpeg";
+import img8 from "../assets/8.jpeg";
+import office from '../assets/office.jpg'
+import warehouse from "../assets/warehouse.jpeg";
+import Housekeeping from "../assets/Housekeeping.jpg";
+import land from "../assets/land.jpeg";
+import godown from "../assets/godown .jpeg";
+import hospital from '../assets/hospital.jpg';
 
 const Home = () => {
+  const [activeCategory, setActiveCategory] = useState("all");
+
+  const categories = [
+    { id: "all", name: "All" },
+    { id: "staffing", name: "Staffing" },
+    { id: "housekeeping", name: "Housekeeping" },
+    { id: "training", name: "Training" },
+    { id: "corporate", name: "Corporate" },
+  ];
+
+  const galleryItems = [
+    {
+      id: 5,
+      category: "corporate",
+      title: "Interior Decoration",
+      image: img4,
+    },
+
+    {
+      id: 2,
+      category: "housekeeping",
+      title: "Hotel Housekeeping Services",
+      image: img1,
+    },
+    {
+      id: 3,
+      category: "cleaning",
+      title: "Industrial Cleaning Operations",
+      image: office,
+    },
+
+    {
+      id: 6,
+      category: "staffing",
+      title: "Interior Decoration",
+      image: img5,
+    },
+    {
+      id: 7,
+      category: "housekeeping",
+      title: "Commercial Housekeeping",
+      image: Housekeeping,
+    },
+    {
+      id: 8,
+      category: "cleaning",
+      title: "Land Levelling | Landscaping",
+      image: land,
+    },
+    {
+      id: 10,
+      category: "corporate",
+      title: "Godown Management",
+      image: godown,
+    },
+    {
+      id: 12,
+      category: "housekeeping",
+      title: "Healthcare Facility Cleaning",
+      image: hospital,
+    },
+    {
+      id: 1,
+      category: "staffing",
+      title: "civil work | Warehouse construction",
+      image: warehouse,
+    },
+  ];
+  const filteredItems =
+    activeCategory === "all"
+      ? galleryItems
+      : galleryItems.filter((item) => item.category === activeCategory);
   return (
     <>
       <SEO
@@ -17,7 +104,7 @@ const Home = () => {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-90"
+          className="absolute inset-0 w-full h-full object-cover opacity-85"
         >
           <source src={headerVideo} type="video/mp4" />
         </video>
@@ -32,33 +119,6 @@ const Home = () => {
               Reliable housekeeping, civil work, and maintenance for your
               business needs
             </p>
-            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/services" className="btn-primary">
-                Explore Our Services
-              </Link>
-              <Link to="/contact" className="btn-secondary bg-white">
-                Get in Touch
-              </Link>
-            </div> */}
-
-            {/* <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-3xl font-bold">500+</div>
-                <div className="text-sm text-blue-100">Employees</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-3xl font-bold">100+</div>
-                <div className="text-sm text-blue-100">Clients</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-3xl font-bold">5+</div>
-                <div className="text-sm text-blue-100">Industries</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-3xl font-bold">95%</div>
-                <div className="text-sm text-blue-100">Retention</div>
-              </div>
-            </div> */}
           </div>
         </div>
       </section>
@@ -352,75 +412,47 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
+      {/* Gallery Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white bg-gray-50">
+        <div className="container-custom px-4">
           <div className="text-center mb-12">
-            <h2 className="heading-2">Our Commitment to Quality</h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              "Quality is never an accident; it is always the result of
-              intelligent effort"
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">
+              Our Deliverables{" "}
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              A visual showcase of our professional services work.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="text-3xl font-bold mb-4 text-primary text-center">
-                Our Mission
-              </h3>
-              <p className="text-gray-700 leading-relaxed text-justify">
-                To empower businesses with skilled, reliable workforce solutions
-                that drive operational excellence. We are committed to creating
-                value through customized staffing services while fostering a
-                culture of safety, quality, and professional development.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="text-3xl font-bold mb-4 text-primary text-center">
-                Our Vision
-              </h3>
-              <p className="text-gray-700 leading-relaxed text-justify">
-                To be recognized as India's most trusted and innovative staffing
-                solutions provider, setting industry benchmarks for quality,
-                compliance, and customer satisfaction through long-term
-                partnerships built on mutual growth and transparency.
-              </p>
-            </div>
+          {/* Gallery Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {filteredItems.map((item) => (
+              <div
+                key={item.id}
+                className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="relative overflow-hidden h-64">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end">
+                    <div className="p-6 text-white w-full">
+                      <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                      <p className="text-sm text-gray-200">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-primary text-white">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Trusted by Leading Companies Across Industries
-          </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            Our commitment to quality and reliability has earned us long-term
-            partnerships with businesses of all sizes
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">500+</div>
-              <div className="text-blue-200">Employees Deployed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">100+</div>
-              <div className="text-blue-200">Active Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">5+</div>
-              <div className="text-blue-200">Industries Served</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">95%</div>
-              <div className="text-blue-200">Client Retention</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gray-200">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="heading-2 mb-6">What Sets Us Apart</h2>

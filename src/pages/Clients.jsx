@@ -7,19 +7,22 @@ const Clients = () => {
       name: "Rajesh Kumar",
       company: "ABC Construction Ltd",
       role: "Project Manager",
-      text: "Sadguru Staffing has been instrumental in providing skilled labor for our construction projects. Their team is professional, reliable, and always delivers on time."
+      text: "Sadguru Staffing has been instrumental in providing skilled labor for our projects. Their team is professional, reliable, and always delivers on time.",
+      rating: 5
     },
     {
       name: "Priya Sharma",
       company: "Grand Plaza Hotel",
       role: "General Manager",
-      text: "The housekeeping staff provided by Sadguru Staffing maintains impeccable standards. Our guests consistently praise the cleanliness and professionalism of their team."
+      text: "The housekeeping staff maintains impeccable standards. Our guests consistently praise the cleanliness and professionalism.",
+      rating: 5
     },
     {
       name: "Amit Patel",
       company: "TechCorp Solutions",
       role: "Facility Manager",
-      text: "We have been partnering with Sadguru Staffing for over two years. Their facility management services have significantly improved our operational efficiency."
+      text: "We've partnered with Sadguru for over two years. Their facility management services have significantly improved our efficiency.",
+      rating: 5
     }
   ]
 
@@ -28,92 +31,98 @@ const Clients = () => {
       <SEO
         title="Our Clients & Testimonials - Sadguru Staffing Solutions"
         description="Trusted by leading companies across industries. Read testimonials from satisfied clients who have experienced our professional staffing and facility management services."
-        keywords="client testimonials, customer reviews, client partnerships, staffing solutions clients, trusted staffing company"
+        keywords="client testimonials, customer reviews, trusted staffing company"
       />
 
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div className="container-custom">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-700 to-blue-600 text-white pt-40 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
+        }}></div>
+        
+        <div className="container-custom relative z-10 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="heading-1 text-white mb-4">Our Valued Clients</h1>
-            <p className="text-xl text-blue-100">
+            <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">
+              Our Valued <span className="text-blue-200">Clients</span>
+            </h1>
+            <p className="text-xl sm:text-2xl text-blue-100 leading-relaxed">
               Building long-term partnerships through trust, quality, and exceptional service
             </p>
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="heading-2">Trusted by Industry Leaders</h2>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              Since our establishment in 2021, we have built strong relationships with businesses 
-              across multiple sectors. Our commitment to excellence and customer satisfaction has 
-              earned us the trust of leading organizations who rely on us for their staffing and 
-              facility management needs.
+      {/* Trust Indicators */}
+      <section className="py-20 bg-white">
+        <div className="container-custom px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-20">
+            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl">
+              <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
+              <div className="text-gray-700 font-medium">Active Clients</div>
+            </div>
+            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl">
+              <div className="text-4xl font-bold text-blue-600 mb-2">95%</div>
+              <div className="text-gray-700 font-medium">Retention Rate</div>
+            </div>
+            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl">
+              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
+              <div className="text-gray-700 font-medium">Staff Deployed</div>
+            </div>
+            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl">
+              <div className="text-4xl font-bold text-blue-600 mb-2">5+</div>
+              <div className="text-gray-700 font-medium">Industries</div>
+            </div>
+          </div>
+
+          {/* Industries */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">Trusted Across Industries</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              We serve leading organizations across multiple sectors
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <div className="text-center">
-              <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {[
+              { icon: '🏗️', name: 'Construction', desc: 'Major projects' },
+              { icon: '🏨', name: 'Hospitality', desc: 'Premium hotels' },
+              { icon: '🏢', name: 'Corporate', desc: 'Business parks' },
+              { icon: '🛍️', name: 'Retail', desc: 'Shopping centers' },
+              { icon: '🏥', name: 'Healthcare', desc: 'Medical facilities' },
+              { icon: '🏭', name: 'Industrial', desc: 'Manufacturing' },
+              { icon: '🎓', name: 'Education', desc: 'Institutions' },
+              { icon: '🏛️', name: 'Government', desc: 'Public sector' }
+            ].map((industry, index) => (
+              <div key={index} className="text-center p-6 bg-gray-50 rounded-xl hover:bg-blue-600 hover:text-white transition duration-300 group">
+                <div className="text-4xl mb-3">{industry.icon}</div>
+                <div className="font-bold text-gray-900 group-hover:text-white mb-1">{industry.name}</div>
+                <div className="text-sm text-gray-600 group-hover:text-blue-100">{industry.desc}</div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Civil & Construction</h3>
-              <p className="text-gray-600">Major construction companies and infrastructure projects</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Hospitality</h3>
-              <p className="text-gray-600">Premium hotels, resorts, and hospitality chains</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Corporate</h3>
-              <p className="text-gray-600">Leading corporate offices and business parks</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Retail</h3>
-              <p className="text-gray-600">Major retail chains and shopping centers</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <h2 className="heading-2 text-center mb-12">What Our Clients Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Testimonials */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container-custom px-4">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">What Our Clients Say</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="card">
-                <div className="mb-4">
-                  <svg className="w-10 h-10 text-primary opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-300">
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
                 </div>
-                <p className="text-gray-700 mb-6 leading-relaxed">{testimonial.text}</p>
+                <p className="text-gray-700 mb-6 leading-relaxed italic">"{testimonial.text}"</p>
                 <div className="border-t pt-4">
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                  <p className="font-bold text-gray-900">{testimonial.name}</p>
                   <p className="text-sm text-gray-600">{testimonial.role}</p>
-                  <p className="text-sm text-primary">{testimonial.company}</p>
+                  <p className="text-sm text-blue-600 font-medium">{testimonial.company}</p>
                 </div>
               </div>
             ))}
@@ -121,130 +130,42 @@ const Clients = () => {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="heading-2 text-center mb-8">Why Clients Choose Us</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
+      {/* Why Choose Us */}
+      <section className="py-20 bg-white">
+        <div className="container-custom px-4">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Why Clients Choose Us</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              { icon: '✅', title: 'Proven Track Record', desc: '95% client retention rate' },
+              { icon: '⚡', title: 'Quick Response', desc: 'Rapid deployment & support' },
+              { icon: '🛡️', title: 'Full Compliance', desc: 'All statutory requirements' },
+              { icon: '💼', title: 'Cost-Effective', desc: 'Competitive pricing' },
+              { icon: '🎯', title: 'Customized Solutions', desc: 'Tailored to your needs' },
+              { icon: '🤝', title: '24/7 Support', desc: 'Always available' }
+            ].map((item, index) => (
+              <div key={index} className="flex items-start p-6 bg-gray-50 rounded-xl hover:bg-blue-50 transition duration-300">
+                <div className="text-4xl mr-4">{item.icon}</div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Proven Track Record</h3>
-                  <p className="text-gray-600">
-                    Consistent delivery of high-quality services with over 95% client retention rate
-                  </p>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">{item.title}</h3>
+                  <p className="text-gray-600">{item.desc}</p>
                 </div>
               </div>
-
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
-                  <p className="text-gray-600">
-                    Round-the-clock customer support for immediate resolution of concerns
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Quick Response Time</h3>
-                  <p className="text-gray-600">
-                    Rapid deployment and responsive service adjustments based on client needs
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Complete Compliance</h3>
-                  <p className="text-gray-600">
-                    Full adherence to all statutory requirements, protecting client interests
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Cost-Effective Solutions</h3>
-                  <p className="text-gray-600">
-                    Competitive pricing without compromising on service quality or workforce standards
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Customized Solutions</h3>
-                  <p className="text-gray-600">
-                    Tailored staffing plans designed to meet specific industry and organizational requirements
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-primary text-white">
-        <div className="container-custom">
+      {/* CTA */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div className="container-custom px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Join Our Growing Family of Satisfied Clients
-            </h2>
+            <h2 className="text-4xl font-bold mb-6">Join Our Growing Family of Satisfied Clients</h2>
             <p className="text-xl mb-8 text-blue-100">
-              Experience the difference that professional staffing and facility management can make 
-              to your business operations
+              Experience the difference that professional staffing can make
             </p>
-            <Link to="/contact" className="btn-primary bg-white text-primary hover:bg-gray-100">
+            <Link to="/contact" className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition duration-300 shadow-lg">
               Partner With Us Today
             </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="heading-2 mb-6">Long-Term Partnerships Built on Trust</h2>
-            <p className="text-gray-700 text-lg leading-relaxed mb-6">
-              At Sadguru Staffing Solutions, we don't just provide services – we build relationships. 
-              Our focus on understanding client needs, delivering consistent quality, and maintaining 
-              open communication has resulted in long-term partnerships that span years.
-            </p>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              Our high repeat business rate is a testament to the trust and satisfaction our clients 
-              experience. We measure our success not just in contracts signed, but in partnerships 
-              sustained and strengthened over time.
-            </p>
           </div>
         </div>
       </section>
